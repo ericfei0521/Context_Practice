@@ -1,4 +1,4 @@
-const initialNumber: { [index: string]: number } = {
+export const initialNumber: { [index: string]: number } = {
     "0": 0,
     "1": 0,
     "2": 0,
@@ -15,7 +15,7 @@ export const numberSwitcher = (state: { [index: string]: number } = initialNumbe
         case "SELECT_NUMBER":
             return {
                 ...state,
-                [0]: 1
+                "0": 1
             }
         default: return state
     }
