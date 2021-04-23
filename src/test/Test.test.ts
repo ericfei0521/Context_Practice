@@ -1,7 +1,7 @@
-import { numberSwitcher } from '../reducer'
-
-describe('test number select test', () => {
-    it('select number 1 should return 1 ', () => {
+import { numberSwitcher } from '../reducer/reducer'
+import { render } from '@testing-library/react'
+describe('App DOM , GlobalState , Function test', () => {
+    test('select number 1 should return 1 ', () => {
         const initialNumber: { [index: string]: number } = {
             "0": 0,
             "1": 1,
@@ -16,5 +16,6 @@ describe('test number select test', () => {
         }
         const result = numberSwitcher(initialNumber, { type: 'SELECT_NUMBER' })
         expect(result[0]).toBe(1)
-    })
+    }),
+
 })

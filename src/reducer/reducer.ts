@@ -15,7 +15,12 @@ export const numberSwitcher = (state: { [index: string]: number } = initialNumbe
         case "SELECT_NUMBER":
             return {
                 ...state,
-                "0": 1
+                [action.payload.number]:action.payload.section
+            }
+        case "REMOVE_SELECT":
+            return{
+                ...state,
+                [action.payload]:0
             }
         default: return state
     }

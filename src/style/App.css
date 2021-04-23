@@ -14,7 +14,5 @@
 }
 button {
   width: 8%;
-}
-button:focus {
-  background-color: aqua;
+  max-width: 60px;
 }
